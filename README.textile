@@ -1,0 +1,8 @@
+h1. Waldson Moura .dotfiles
+
+h2. How install
+
+bc. git clone git@github.com:mourawaldson/dotfiles.git
+(mkdir bin on users root folder if doesn't exists)
+cd dotfiles
+rake install
