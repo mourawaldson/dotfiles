@@ -28,7 +28,7 @@
 	ci = commit
 	pl = pull --rebase
 	ps = push
-	ar = branch
+	br = branch
 	co = checkout
 	df = diff
 	sh = stash
