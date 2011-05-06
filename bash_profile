@@ -5,6 +5,8 @@ alias :='cd ..'
 
 alias htdocs='cd /usr/local/zend/apache2/htdocs'
 
+alias mysql='/usr/local/mysql/bin/mysql -uroot'
+
 alias showhiddenfiles='defaults write com.apple.finder AppleShowAllFiles TRUE'
 alias hiddenfiles='defaults write com.apple.finder AppleShowAllFiles FALSE'
 alias finder='killall Finder'
