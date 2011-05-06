@@ -1,9 +1,12 @@
+#Utility
 alias c=clear
 alias h=history
 alias g=git
 alias :='cd ..'
 
+#Projects
 alias htdocs='cd /usr/local/zend/apache2/htdocs'
+alias cahier='cd /usr/local/zend/apache2/htdocs/cahier'
 
 alias mysql='/usr/local/mysql/bin/mysql -uroot'
 
