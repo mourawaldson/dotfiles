@@ -34,6 +34,7 @@
 	sh = stash
 	mg = merge
 	bl = blame
+	cp = cherry-pick
 	lg = log -p
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
