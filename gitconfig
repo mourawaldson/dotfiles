@@ -48,3 +48,5 @@
 	tool = diffmerge
 [difftool "diffmerge"]
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/diffmerge $LOCAL $REMOTE
+[mergetool]
+	keepBackup = false
