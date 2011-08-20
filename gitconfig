@@ -32,7 +32,7 @@
 	sh = stash
 	mg = merge
 	bl = blame
-	cp = cherry-pick
+	cp = cherry-pick 
 	lg = log -p
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
@@ -47,3 +47,5 @@
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/diffmerge $LOCAL $REMOTE
 [mergetool]
 	keepBackup = false
+[apply]
+	whitespace = nowarn
