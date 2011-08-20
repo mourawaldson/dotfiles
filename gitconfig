@@ -31,7 +31,7 @@
 	ps = push
 	br = branch
 	co = checkout
-	df = diff
+	df = difftool -t diffmerge
 	sh = stash
 	mg = merge
 	bl = blame
