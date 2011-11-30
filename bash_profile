@@ -13,6 +13,6 @@ alias mysql='/usr/local/mysql/bin/mysql -uroot'
 
 #Projects
 alias htdocs='cd /usr/local/zend/apache2/htdocs'
-alias cahier_core='cd /usr/local/zend/apache2/htdocs/mgr/cahier_core'
+alias cahier='cd /usr/local/zend/apache2/htdocs/mgr/cahier'
 
 export PS1='\h:\W \u $(vcprompt)\$ '
