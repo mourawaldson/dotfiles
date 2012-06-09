@@ -22,7 +22,7 @@
 	autocrlf = false
 	ignorecase = false
 [alias]
-	st = status
+	st = status -sb
 	ci = commit
 	pl = pull --rebase
 	ps = push
