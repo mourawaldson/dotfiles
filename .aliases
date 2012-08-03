@@ -6,6 +6,8 @@ alias untar='tar xvzf'
 alias show='defaults write com.apple.finder AppleShowAllFiles true && killall Finder'
 alias hide='defaults write com.apple.finder AppleShowAllFiles false && killall Finder'
 
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash"
+
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 
