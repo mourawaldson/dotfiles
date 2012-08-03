@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Linking files
+ln -fs ".dotfiles/.bashrc"	  "${HOME}/.bashrc"
+ln -fs ".dotfiles/.bash_profile"  "${HOME}/.bash_profile"
+ln -fs ".dotfiles/.aliases"	  "${HOME}/.aliases"
+ln -fs ".dotfiles/.gitconfig"	  "${HOME}/.gitconfig"
+ln -fs ".dotfiles/.gitignore"	  "${HOME}/.gitignore"

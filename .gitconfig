@@ -22,30 +22,18 @@
 	autocrlf = false
 	ignorecase = false
 [alias]
-	st = status -sb
+	st = status
 	ci = commit
 	pl = pull --rebase
 	ps = push
 	br = branch
 	co = checkout
-	df = difftool -t diffmerge
 	sh = stash
 	mg = merge
 	bl = blame
 	cp = cherry-pick 
-	lg = log -p
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	ls = ls-files
+	tags = tag -l
 [branch]
 	autosetupmerge = true
 [push]
 	default = tracking
-[merge]
-	tool = diffmerge
-[difftool "diffmerge"]
-	cmd = /Applications/DiffMerge.app/Contents/MacOS/diffmerge $LOCAL $REMOTE
-[mergetool]
-	keepBackup = false
-[apply]
-	whitespace = nowarn
