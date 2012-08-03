@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+unlink ~/.aliases
+unlink ~/.bash_profile
+unlink ~/.bashrc
+unlink ~/.gitconfig
+unlink ~/.gitignore
