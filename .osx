@@ -418,11 +418,19 @@ defaults write com.twitter.twitter-mac ShowFullNames -bool true
 defaults write com.twitter.twitter-mac ScrollingMakesKeyAndOrdersFront -bool true
 
 ###############################################################################
-# Kill affected applications                                                  #
+# Kill affected applications or restart the system                            #
 ###############################################################################
 
-for app in "Address Book" "Contacts" "iCal" "Calendar" "Dock" "Finder" "Mail" \
-	"Safari" "iTunes" "SystemUIServer" "Terminal" "Twitter"; do
-	killall "$app" > /dev/null 2>&1
-done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
+echo "To restart the system press [r] or to kill affected apps press [k]"
+
+read option
+
+if [ $option == "r" ]; then
+	sudo shutdown -r now
+elif [ $option == "k" ]; then
+	for app in "Address Book" "Contacts" "iCal" "Calendar" "Dock" "Finder" "Mail" \
+		"Safari" "iTunes" "SystemUIServer" "Terminal" "Twitter"; do
+		killall "$app" > /dev/null 2>&1
+	done
+fi
