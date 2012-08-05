@@ -404,13 +404,17 @@ defaults write com.twitter.twitter-mac ShowDevelopMenu -bool true
 defaults write com.twitter.twitter-mac openLinksInBackground -bool true
 
 # Allow closing the ‘new tweet’ window by pressing `Esc`
+#(works by default)
 #defaults write com.twitter.twitter-mac ESCClosesComposeWindow -bool true
 
 # Show full names rather than Twitter handles
 defaults write com.twitter.twitter-mac ShowFullNames -bool true
 
 # Hide the app in the background if it’s not the front-most window
-defaults write com.twitter.twitter-mac HideInBackground -bool true
+#defaults write com.twitter.twitter-mac HideInBackground -bool true
+
+# Scroll over window will bring to front
+defaults write com.twitter.twitter-mac ScrollingMakesKeyAndOrdersFront -bool true
 
 ###############################################################################
 # Kill affected applications                                                  #
