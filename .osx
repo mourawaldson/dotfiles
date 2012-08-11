@@ -199,6 +199,10 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 # Decrease the text size on the desktop
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:textSize 10" ~/Library/Preferences/com.apple.finder.plist
 
+# Use columns view in all Finder windows by default
+# Four-letter codes for the other view modes: `icnv`, `Nlsv`, `Flwv`
+defaults write com.apple.Finder FXPreferredViewStyle -string "clmv"
+
 # Disable the warning before emptying the Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
