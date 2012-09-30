@@ -14,3 +14,4 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 
 alias htdocs='cd /usr/local/zend/apache2/htdocs'
+alias verbatim='cd /Users/waldson/Dropbox/Projetos/Google/Chrome/Extensions/verbatim'
