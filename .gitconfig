@@ -14,8 +14,8 @@
 	new = green bold
 	whitespace = red reverse
 [color "status"]
-	added = yellow
-	changed = green
+	added = green
+	changed = yellow
 	untracked = cyan
 [core]
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
@@ -31,9 +31,13 @@
 	sh = stash
 	mg = merge
 	bl = blame
-	cp = cherry-pick 
+	cp = cherry-pick
 	tags = tag -l
 [branch]
 	autosetupmerge = true
 [push]
 	default = tracking
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
