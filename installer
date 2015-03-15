@@ -42,7 +42,7 @@ curl -O https://transmission.cachefly.net/Transmission-2.84.dmg && hdiutil attac
 curl -O http://mirror.csclub.uwaterloo.ca/vlc/vlc/2.2.0/macosx/vlc-2.2.0.dmg && hdiutil attach vlc-2.2.0.dmg && cp -R /Volumes/vlc-2.2.0/VLC.app /Applications/ && hdiutil detach /Volumes/vlc-2.2.0 && rm vlc-2.2.0.dmg
 
 # Install DiffMerge
-curl -o DiffMerge.dmg http://download-us.sourcegear.com/DiffMerge/4.2.0/DiffMerge.4.2.0.697.intel.stable.dmg && hdiutil attach DiffMerge.dmg && cp -R /Volumes/DiffMerge\ 4.2.0.697\ intel\ stable /Applications/ && hdiutil detach /Volumes/DiffMerge\ 4.2.0.697\ intel\ stable && rm DiffMerge.dmg
+curl -o DiffMerge.dmg http://download-us.sourcegear.com/DiffMerge/4.2.0/DiffMerge.4.2.0.697.intel.stable.dmg && hdiutil attach DiffMerge.dmg && cp -R /Volumes/DiffMerge\ 4.2.0.697\ intel\ stable/DiffMerge.app /Applications/ && hdiutil detach /Volumes/DiffMerge\ 4.2.0.697\ intel\ stable && rm DiffMerge.dmg
 
 # Install MacKeeper
 curl -o MacKeeper.2.17.1.pkg http://download.mackeeper.com/package.php?bundleId=29_2 && open MacKeeper.2.17.1.pkg
