@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Install PHP 5.6
+#curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6
+
+ini=/usr/local/php5/php.d/99-liip-developer.ini
+github=https://github.com/mourawaldson
+
+# Backup ini
+#sudo cp $ini $ini-bkp
+
+# Change timezone
+#sudo sed -i '' 's/Zurich/Recife/g' $ini
+#sudo sed -i '' 's/Europe/America/g' $ini
+#sudo sed -i '' '15 s/^/; /g' $ini
+#sudo sed -i '' '16 s/^/; /g' $ini
+
+# Enable extensions
+for i in {54..79}
+do
+  command="sudo sed -i '' '$i s/; //g' $ini"
+  #eval="$command"
+done
+
+# Install .dotfiles
+cd $HOME;
+
+#curl -sL $github/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude=readme.md
+
+#curl -sL $github/themes/tarball/master | tar -xzv --strip-components 1 --exclude=README.md --exclude=LICENSE
+#open Soft.terminal
+#sleep 1
+#sudo rm Soft.terminal
+#defaults write com.apple.Terminal "Default Window Settings" -string "Soft"
+#defaults write com.apple.Terminal "Startup Window Settings" -string "Soft"
+
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Delete :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers" /dev/null 2>&1
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers array" && i=1
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.BACK" && ((i++))
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string NSToolbarFlexibleSpaceItem" && ((i++))
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.SWCH" && ((i++))
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.ARNG" && ((i++))
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.ACTN" && ((i++))
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.SHAR" && ((i++))
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.LABL" && ((i++))
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string NSToolbarFlexibleSpaceItem" && ((i++))
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.NFLD" && ((i++))
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.TRSH" && ((i++))
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string NSToolbarFlexibleSpaceItem" && ((i++))
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.SRCH" && ((i++))
+unset i
