@@ -27,30 +27,10 @@ done
 
 # Install .dotfiles
 cd $HOME;
-
 curl -sL $github/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude=readme.md
 
-curl -sL $github/themes/tarball/master | tar -xzv --strip-components 1 --exclude=README.md --exclude=LICENSE
-open Soft.terminal
-sleep 1
-sudo rm Soft.terminal
-defaults write com.apple.Terminal "Default Window Settings" -string "Soft"
-defaults write com.apple.Terminal "Startup Window Settings" -string "Soft"
-
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Delete :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers" /dev/null 2>&1
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers array" && i=1
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.BACK" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string NSToolbarFlexibleSpaceItem" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.SWCH" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.ARNG" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.ACTN" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.SHAR" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.LABL" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string NSToolbarFlexibleSpaceItem" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.NFLD" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.TRSH" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string NSToolbarFlexibleSpaceItem" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.SRCH" && ((i++))
-unset i
-
+# Install command line
 xcode-select --install
+
+# Install Transmission
+curl -O https://transmission.cachefly.net/Transmission-2.84.dmg | hdiutil attach Transmission-2.84.dmg | cp -R /Volumes/Transmission/Transmission.app /Applications/ | hdiutil detach /Volumes/Transmission | rm Transmission-2.84.dmg
