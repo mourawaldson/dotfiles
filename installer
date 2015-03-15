@@ -33,4 +33,15 @@ curl -sL $github/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclu
 xcode-select --install
 
 # Install Transmission
-curl -O https://transmission.cachefly.net/Transmission-2.84.dmg | hdiutil attach Transmission-2.84.dmg | cp -R /Volumes/Transmission/Transmission.app /Applications/ | hdiutil detach /Volumes/Transmission | rm Transmission-2.84.dmg
+curl -O https://transmission.cachefly.net/Transmission-2.84.dmg
+hdiutil attach Transmission-2.84.dmg
+cp -R /Volumes/Transmission/Transmission.app /Applications/
+hdiutil detach /Volumes/Transmission
+rm Transmission-2.84.dmg
+
+# Install VLC
+curl -O http://mirror.csclub.uwaterloo.ca/vlc/vlc/2.2.0/macosx/vlc-2.2.0.dmg
+hdiutil attach vlc-2.2.0.dmg
+cp -R /Volumes/vlc-2.2.0/VLC.app /Applications/
+hdiutil detach /Volumes/vlc-2.2.0
+rm vlc-2.2.0.dmg
