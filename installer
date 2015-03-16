@@ -67,6 +67,9 @@ curl -o MacKeeper.2.17.1.pkg http://download.mackeeper.com/package.php?bundleId=
 # GitX
 curl -O http://builds.phere.net/GitX/development/GitX-dev.dmg && hdiutil attach GitX-dev.dmg && cp -R /Volumes/GitX\ 1964/GitX.app /Applications/ && hdiutil detach /Volumes/GitX\ 1964 && rm GitX-dev.dmg
 
+# Sequel Pro
+curl -O https://sequel-pro.googlecode.com/files/sequel-pro-1.0.2.dmg && hdiutil attach sequel-pro-1.0.2.dmg && cp -R /Volumes/Sequel\ Pro\ 1.0.2/Sequel\ Pro.app /Applications/ && hdiutil detach /Volumes/Sequel\ Pro\ 1.0.2 && rm sequel-pro-1.0.2.dmg && cp ~/Dropbox/Softwares/Sequel\ Pro/Data/Favorites.plist ~/Library/Application\ Support/Sequel\ Pro/Data/Favorites.plist
+
 ###############################################################################
 # Misc                                                                        #
 ###############################################################################
