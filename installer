@@ -36,6 +36,9 @@ done
 # Google Chrome
 curl -O https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg && hdiutil attach googlechrome.dmg && cp /Volumes/Google\ Chrome/Google\ Chrome.app /Applications/ && hdiutil detach /Volumes/Google\ Chrome && rm googlechrome.dmg
 
+# Google Drive
+curl -O https://dl.google.com/drive/installgoogledrive.dmg && hdiutil attach installgoogledrive.dmg && cp /Volumes/Install\ Google\ Drive/Google\ Drive.app /Applications/ && hdiutil detach /Volues/Install\ Google\ Drive && rm installgoogledrive.dmg
+
 # CCleaner
 curl -k -o ccleaner.dmg https://download.piriform.com/mac/CCMacSetup109.dmg && hdiutil attach ccleaner.dmg && cp -R /Volumes/CCleaner/CCleaner.app /Applications/ && hdiutil detach /Volumes/CCleaner && rm CCMacSetup109.dmg
 
