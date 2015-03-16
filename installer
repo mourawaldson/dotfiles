@@ -61,6 +61,9 @@ echo "$PHPINFO" > $SITESDIR/info.php
 # Restart Apache
 sudo apachectl restart
 
+# Build recent Apache
+# https://gist.github.com/mourawaldson/f118948baebebe556dca
+
 ###############################################################################
 # Apps                                                                        #
 ###############################################################################
