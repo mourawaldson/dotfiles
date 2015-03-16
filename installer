@@ -4,7 +4,7 @@
 sudo -v
 
 ###############################################################################
-# PHP & Apache                                                                #
+# PHP                                                                         #
 ###############################################################################
 
 # Install PHP 5.6
@@ -30,8 +30,18 @@ do
 done
 
 ###############################################################################
+# Apache                                                                      #
+###############################################################################
+
+
+
+###############################################################################
 # Apps                                                                        #
 ###############################################################################
+
+# Git
+
+# MySQL
 
 # Google Chrome
 curl -O https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg && hdiutil attach googlechrome.dmg && cp /Volumes/Google\ Chrome/Google\ Chrome.app /Applications/ && hdiutil detach /Volumes/Google\ Chrome && rm googlechrome.dmg
@@ -74,10 +84,16 @@ curl -O https://sequel-pro.googlecode.com/files/sequel-pro-1.0.2.dmg && hdiutil 
 # Misc                                                                        #
 ###############################################################################
 
+## Remember to install
+# Hewlett-Packard  
+# Microsoft Office 2011  
+
 # Install command line
 xcode-select --install
 
 # Install .dotfiles
 cd $HOME;
-curl -sL $github/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude=readme.md
-cd; bash .dotfiles/.osx
+curl -sL $github/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude=readme.md && bash .dotfiles/install
+
+# Install .osx
+bash .dotfiles/.osx
