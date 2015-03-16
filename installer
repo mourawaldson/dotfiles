@@ -33,7 +33,33 @@ done
 # Apache                                                                      #
 ###############################################################################
 
+# Create conf
+MOURAWALDSONCONF="<Directory "/Users/mourawaldson/Sites">
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+</Directory>"
+echo "$MOURAWALDSONCONF" > /etc/apache2/users/mourawaldson.conf
 
+# Enable PHP
+sudo sed -i '' 's/#LoadModule\ php5_module\ libexec\/apache2\/libphp5.so/LoadModule\ php5_module\ libexec\/apache2\/libphp5.so/g' /etc/apache2/httpd.conf
+
+# Enable mod_rewrite
+sudo sed -i '' 's/#LoadModule\ rewrite_module\ libexec\/apache2\/mod_rewrite.so/LoadModule\ rewrite_module\ libexec\/apache2\/mod_rewrite.so/g' /etc/apache2/httpd.conf
+
+# Add index.php as possible DirectoryIndex
+sudo sed -i '' 's/DirectoryIndex\ index.html/DirectoryIndex\ index.html\ index.php/g' /etc/apache2/httpd.conf
+
+# Create info.php
+SITESDIR=/Users/mourawaldson/Sites
+mkdir $SITESDIR
+PHPINFO="<?php
+phpinfo();"
+echo "$PHPINFO" > $SITESDIR/info.php
+
+# Restart Apache
+sudo apachectl restart
 
 ###############################################################################
 # Apps                                                                        #
