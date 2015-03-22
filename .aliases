@@ -3,8 +3,6 @@ alias h=history
 alias g=git
 alias untar='tar xvzf'
 
-alias mysql='/usr/local/mysql/bin/mysql -uroot'
-
 alias show='defaults write com.apple.finder AppleShowAllFiles true && killall Finder'
 alias hide='defaults write com.apple.finder AppleShowAllFiles false && killall Finder'
 
@@ -14,3 +12,5 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 
 alias htdocs='cd /usr/local/apache2/htdocs'
+
+alias etcf='exiftool -d %Y/%m/%d "-directory<createdate" *'
