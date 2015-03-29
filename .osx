@@ -273,21 +273,21 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:textSize 10" ~/Library/Preferences/com.apple.finder.plist
 
 # Customize Finder Toolbar
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Delete :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers" /dev/null 2>&1
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers array" && i=1
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.BACK" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string NSToolbarFlexibleSpaceItem" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.SWCH" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.ARNG" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.ACTN" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.SHAR" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.LABL" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string NSToolbarFlexibleSpaceItem" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.NFLD" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.TRSH" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string NSToolbarFlexibleSpaceItem" && ((i++))
-/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.SRCH" && ((i++))
-unset i
+#/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Delete :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers" /dev/null 2>&1
+#/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers array" && i=1
+#/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.BACK" && ((i++))
+#/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string NSToolbarFlexibleSpaceItem" && ((i++))
+#/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.SWCH" && ((i++))
+#/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.ARNG" && ((i++))
+#/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.ACTN" && ((i++))
+#/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.SHAR" && ((i++))
+#/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.LABL" && ((i++))
+#/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string NSToolbarFlexibleSpaceItem" && ((i++))
+#/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.NFLD" && ((i++))
+#/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.TRSH" && ((i++))
+#/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string NSToolbarFlexibleSpaceItem" && ((i++))
+#/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.finder.plist -c "Add :NSToolbar\ Configuration\ Browser:TB\ Item\ Identifiers:$i string ~/Library/Preferences/com.apple.finder.plist.SRCH" && ((i++))
+#unset i
 
 # Use columns view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `Nlsv`, `Flwv`
