@@ -10,3 +10,5 @@ export PATH=/usr/local/php5/bin:$PATH
 export PATH=/usr/local/git/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 export PATH=/usr/local/pcre/bin:$PATH
+export PATH=/usr/local/apache/bin:$PATH
+export MANPATH=/usr/local/apache/man:$MANPATH
