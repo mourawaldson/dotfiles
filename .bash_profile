@@ -9,3 +9,4 @@ export PS1="\n\[$(tput setaf 6)\]\w\[$(tput setaf 3)\]\$(parse_git_branch) \[$(t
 export PATH=/usr/local/php5/bin:$PATH
 export PATH=/usr/local/git/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
+export PATH=/usr/local/pcre/bin:$PATH
