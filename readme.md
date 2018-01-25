@@ -6,7 +6,7 @@ cd; git clone git@github.com:mourawaldson/dotfiles.git .dotfiles && bash .dotfil
 ```
 ## Git free install
 ```bash
-cd; mkdir .dotfiles && cd .dotfiles && curl -sL $github/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude=readme.md && bash install
+cd; mkdir .dotfiles && cd .dotfiles && curl -sL https://github.com/mourawaldson/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude=readme.md && bash install
 ```
 
 ## Install .osx
