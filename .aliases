@@ -14,3 +14,5 @@ alias localip="ipconfig getifaddr en1"
 alias htdocs='cd /usr/local/apache2/htdocs'
 
 alias etcf='exiftool -d %Y/%m/%d "-directory<createdate" *'
+
+alias usb='sudo killall -STOP -c usbd'
