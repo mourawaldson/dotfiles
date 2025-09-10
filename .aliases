@@ -15,4 +15,6 @@ alias htdocs='cd /usr/local/apache2/htdocs'
 
 alias etcf='exiftool -d %Y/%m/%d "-directory<createdate" *'
 
+alias etcf2='exiftool -m -r -q -q -extractEmbedded -d %Y/%m/%d "-directory<DateTimeOriginal" "-directory<CreateDate" .'
+
 alias usb='sudo killall -STOP -c usbd'
